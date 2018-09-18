@@ -23,7 +23,7 @@ KEYGEN_OBJS=aescrypt_keygen.o keyfile.o password.o
 # Uncomment the line below to compile on Mac and FreeBSD when you see an error about
 # not finding the libiconv_* functions when linking
 #
-#LIBS=-liconv
+LIBS=-liconv
 
 all: aescrypt aescrypt_keygen
 
@@ -81,19 +81,19 @@ test: aescrypt
 	@rm test.txt test.passwd.txt
 	# Test password length 1023
 	@cat /dev/null >test.passwd.txt
-	@for x in `seq 1 1023`; do echo -n X >>test.passwd.txt; done
+	@for x in `seq 1 1023`; do printf X >>test.passwd.txt; done
 	@echo "Testing..." > test.txt
 	@./aescrypt -e -p `cat test.passwd.txt` test.txt
 	@rm test.txt.aes test.txt test.passwd.txt
 	# Test password length 1024
 	@cat /dev/null >test.passwd.txt
-	@for x in `seq 1 1024`; do echo -n X >>test.passwd.txt; done
+	@for x in `seq 1 1024`; do printf X >>test.passwd.txt; done
 	@echo "Testing..." > test.txt
 	@./aescrypt -e -p `cat test.passwd.txt` test.txt
 	@rm test.txt.aes test.txt test.passwd.txt
 	# Test password length 1025
 	@cat /dev/null >test.passwd.txt
-	@for x in `seq 1 1025`; do echo -n X >>test.passwd.txt; done
+	@for x in `seq 1 1025`; do printf X >>test.passwd.txt; done
 	@echo "Testing..." > test.txt
 	@# Expecting a failure here, but reflect opposite result code
 	@./aescrypt -e -p `cat test.passwd.txt` test.txt 2>/dev/null && \
