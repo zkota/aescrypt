@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleAllowMixedLocalizations</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>*</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>lock.icns</string>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>encrypted</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Encrypted document</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>****</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Encryptor</string>
+			<key>LSEnvironment</key>
+			<dict>
+				<key>AESCRYPT_DIRECTION</key>
+				<string>encryption</string>
+			</dict>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>aes</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>lock.icns</string>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>encrypted</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Encrypted document</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>****</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Encryptor</string>
+			<key>LSEnvironment</key>
+			<dict>
+				<key>AESCRYPT_DIRECTION</key>
+				<string>decryption</string>
+			</dict>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>applet</string>
+	<key>CFBundleIconFile</key>
+	<string>applet</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>AESCrypt</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>aplt</string>
+	<key>LSRequiresCarbon</key>
+	<true/>
+	<key>WindowState</key>
+	<dict>
+		<key>name</key>
+		<string>ScriptWindowState</string>
+		<key>positionOfDivider</key>
+		<real>475</real>
+		<key>savedFrame</key>
+		<string>395 167 1142 677 0 0 1680 1028 </string>
+		<key>selectedTabView</key>
+		<string>result</string>
+	</dict>
+</dict>
+</plist>
