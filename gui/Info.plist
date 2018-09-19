@@ -26,7 +26,7 @@
 				<string>****</string>
 			</array>
 			<key>CFBundleTypeRole</key>
-			<string>Encryptor</string>
+			<string>Editor</string>
 			<key>LSEnvironment</key>
 			<dict>
 				<key>AESCRYPT_DIRECTION</key>
@@ -53,7 +53,7 @@
 				<string>****</string>
 			</array>
 			<key>CFBundleTypeRole</key>
-			<string>Encryptor</string>
+			<string>Editor</string>
 			<key>LSEnvironment</key>
 			<dict>
 				<key>AESCRYPT_DIRECTION</key>
@@ -64,29 +64,50 @@
 		</dict>
 	</array>
 	<key>CFBundleExecutable</key>
-	<string>applet</string>
+	<string>droplet</string>
 	<key>CFBundleIconFile</key>
-	<string>applet</string>
+	<string>droplet</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.ScriptEditor.id.AESCrypt</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>AESCrypt</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.1</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.1</string>
 	<key>CFBundleSignature</key>
-	<string>aplt</string>
+	<string>dplt</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.6.0</string>
+	<key>LSMinimumSystemVersionByArchitecture</key>
+	<dict>
+		<key>x86_64</key>
+		<string>10.6.0</string>
+	</dict>
 	<key>LSRequiresCarbon</key>
 	<true/>
 	<key>WindowState</key>
 	<dict>
+		<key>bundleDividerCollapsed</key>
+		<true/>
+		<key>bundlePositionOfDivider</key>
+		<real>0</real>
+		<key>dividerCollapsed</key>
+		<false/>
+		<key>eventLogLevel</key>
+		<integer>2</integer>
 		<key>name</key>
 		<string>ScriptWindowState</string>
 		<key>positionOfDivider</key>
-		<real>475</real>
+		<real>421</real>
 		<key>savedFrame</key>
-		<string>395 167 1142 677 0 0 1680 1028 </string>
-		<key>selectedTabView</key>
-		<string>result</string>
+		<string>1461 87 925 672 1440 -180 1920 1057 </string>
+		<key>selectedTab</key>
+		<string>description</string>
 	</dict>
 </dict>
 </plist>
