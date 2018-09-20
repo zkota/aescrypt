@@ -15,15 +15,14 @@
 
 CC=gcc
 CFLAGS=-Wall -Wextra -pedantic -std=c99 -D_FILE_OFFSET_BITS=64
-LIBS=
 AESCRYPT_OBJS=aescrypt.o aes.o sha256.o password.o keyfile.o
 KEYGEN_OBJS=aescrypt_keygen.o keyfile.o password.o
-
-#
-# Uncomment the line below to compile on Mac and FreeBSD when you see an error about
-# not finding the libiconv_* functions when linking
-#
-LIBS=-liconv
+# Linux does not need the iconv library included, though Mac and BSD do
+ifeq ($(shell uname -s), Linux)
+    LIBS=
+else
+    LIBS=-liconv
+endif
 
 all: aescrypt aescrypt_keygen
 

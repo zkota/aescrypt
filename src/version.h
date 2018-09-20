@@ -18,7 +18,7 @@
 #define AESCRYPT_VERSION_H
 
 #define PROG_NAME       "aescrypt"
-#define PROG_VERSION    "3.13"
-#define PROG_DATE       "March 11, 2017"
+#define PROG_VERSION    "3.14"
+#define PROG_DATE       "September 20, 2018"
 
 #endif // AESCRYPT_VERSION_H
