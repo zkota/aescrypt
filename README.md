@@ -6,7 +6,7 @@ The code of the command-line utility is based on the master linux code at aescry
 directly.
 
 
-1. Building and installing the command-line programs
+### Building and installing the command-line programs
 
 Building the program from the source code you probably will need the development tools of 
 your MacOS installed (e.g. XCode).
@@ -16,7 +16,7 @@ or manually copy the executable files wherever you want them. The two files of i
 are "aescrypt" and "aescrypt_keygen".
 
 
-2. AESCrypt.app - a droplet GUI application for Mac
+### AESCrypt.app - a droplet GUI application for Mac
 
 AESCrypt, which can be downloaded from www.aescrypt.com, is a small graphical droplet 
 application for MacOS. It is based on a simple applescript invoking aescrypt. The script 
