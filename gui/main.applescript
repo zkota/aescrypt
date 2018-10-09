@@ -21,14 +21,40 @@ on open argv
 			set status to FileExists(dFile)
 		end if
 		
-		set my_pass to quoted form of text returned of (display dialog Â
-			"Enter password for " & my_direction Â
-			with title Â
-			"AESCrypt" with icon 1 Â
-			default answer Â
-			"" buttons {"Continue"} Â
-			default button (1) Â
-			with hidden answer)
+		set display_text to "Enter password for " & my_direction
+		if my_direction = "encryption" then
+			repeat
+				considering case
+					set my_pass to quoted form of text returned of (display dialog Â
+						display_text with title Â
+						"AESCrypt" with icon 1 Â
+						default answer Â
+						"" buttons {"Continue"} Â
+						default button (1) Â
+						with hidden answer)
+					set verify_pass to quoted form of text returned of (display dialog Â
+						"Verify your password" with title Â
+						"AESCrypt" with icon 1 Â
+						default answer Â
+						"" buttons {"Continue"} Â
+						default button (1) Â
+						with hidden answer)
+					if (verify_pass = my_pass) then
+						exit repeat
+					else
+						set display_text to "Passwords don't match, please try again"
+					end if
+				end considering
+			end repeat
+		else
+			set my_pass to quoted form of text returned of (display dialog Â
+				display_text with title Â
+				"AESCrypt" with icon 1 Â
+				default answer Â
+				"" buttons {"Continue"} Â
+				default button (1) Â
+				with hidden answer)
+		end if
 		
 		set myPath to (path to me) as text
 		set myAES to myPath & "Contents:MacOS:aescrypt"
